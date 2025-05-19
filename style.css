@@ -1,0 +1,313 @@
+@font-face {
+    font-family: 'Burgues Script';
+    src: url('fonts/burgues-script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh; /* Altura mínima da tela */
+    background: #f7f3f3; /* Cor de fundo */
+    color: #000000; /* Cor do texto */
+    font-family: 'Poppins', Arial, sans-serif; /* Fonte */
+    margin: 0; /* Remove margens padrão */
+    overflow-x: hidden; /* Remove barra de rolagem horizontal */
+    position: relative; /* Para posicionar os ícones */
+}
+
+.texto-centralizado {
+    max-width: 1100px;      /* Limita a largura máxima */
+    margin: 0 auto;        /* Centraliza horizontalmente */
+    text-align: center;    /* Centraliza o texto */
+    padding: 0 20px;       /* Espaço nas laterais para telas pequenas */
+}
+/* Ícones animados no fundo */
+.icone-fundo {
+    position: absolute;
+    opacity: 0.19;
+    width: 90px;
+    height: 90px;
+    z-index: 0;
+    filter: blur(1px) drop-shadow(0 0 12px #fff);
+    animation: flutuar 7s infinite alternate;
+    pointer-events: none;
+}
+.icone1 { top: 10%; left: 8%; animation-delay: 5s; }
+.icone2 { top: 20%; left: 80%; animation-delay: 1.5s; }
+.icone3 { top: 70%; left: 15%; animation-delay: 3s; }
+.icone4 { top: 60%; left: 75%; animation-delay: 2.2s; }
+.icone5 { top: 40%; left: 50%; animation-delay: 1.5s; }
+.icone6 { top: 80%; left: 35%; animation-delay: 5s; }
+.icone7 { top: 25%; left: 20%; animation-delay: 4.5s; }
+.icone8 { top: 50%; left: 85%; animation-delay: 4s; }
+.icone9 { top: 15%; left: 60%; animation-delay: 5.8s; }
+.icone10 { top: 55%; left: 30%; animation-delay: 4.8s; }
+.icone11 { top: 90%; left: 70%; animation-delay: 5.5s; }
+.icone12 { top: 75%; left: 88%; animation-delay: 4.5s; }
+.icone13 { top: 90%; left: 5%; animation-delay: 3.5s; }
+.icone14 { top: 58%; left: 10%; animation-delay: 2.5s; }
+
+@keyframes flutuar {
+    0% { transform: translateY(0) scale(1);}
+    100% { transform: translateY(-50px) scale(1.12);}
+}
+
+/* Conteúdo centralizado e destacado */
+.conteudo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Perfil */
+.perfil {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.foto-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 30px #f4f2f2fa, 0 0 0 8px #ec1919, ;
+    margin-bottom: 18px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.nome-imagem {
+    display: block;
+    margin: -55px  auto 2px auto;
+    max-width: 500px;   /* ajuste conforme o tamanho da sua imagem */
+    width: 100%;
+    height: auto;
+}
+.foto-perfil:hover {
+    transform: scale(1.07) rotate(-2deg); /* Efeito de zoom e rotação */
+    box-shadow: 0 0 40px #ea1c1c, 0 0 0 8px #f1eeee; /* Sombra mais intensa */
+}
+h1 {
+    font-family: 'Burgues Script', cursive, sans-serif;/* Fonte personalizada */
+    font-size: 1.3em; /* Tamanho da fonte */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    background: linear-gradient(90deg, #ff00cc, #00ffe7, #000000, #121111); 
+    background-clip: text;
+    -webkit-background-clip: text; 
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: brilhoTexto 3s infinite alternate;
+}
+@keyframes brilhoTexto {
+    0% { filter: brightness(1);}
+    100% { filter: brightness(1.3);}
+}
+h2 {
+    font-family: 'Raleway', Arial, sans-serif; /* Fonte */
+    font-size: -3em;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 10px 0;
+}
+.perfil p {
+    font-size: 1.1em;
+    color: #020202;
+    margin-bottom: 0;
+}
+
+/* Redes Sociais */
+.nome-rede {
+    display: block; /* Para centralizar o texto */
+    text-align: center; 
+    font-size: 1em; /* Tamanho da fonte */
+    color: #000000;
+    margin-top: -55px; /* Espaçamento acima */
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 300; /* Peso da fonte */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+.redes-sociais a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+.redes-sociais {
+    display: flex;
+    gap: 30px; /* Espaçamento entre os ícones */
+    justify-content: center;
+    margin: 30px 0;
+}
+.redes-sociais a img {
+    width: 88px; /* Tamanho dos ícones */
+    height: 88px; /* Tamanho dos ícones */
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 7px;
+    box-shadow: 0 0 10px #fe1717f7;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.redes-sociais a img:hover {
+    transform: scale(1.18) rotate(-8deg);
+    box-shadow: 0 0 20px #ff2c2c;
+    background: #fffcfc;
+}
+h6 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 0.85em;              /* Tamanho maior */
+    color: #22223b;                /* Cor vibrante, troque se quiser */
+    font-weight: 300; /* deixa mais fina */;
+    text-align: center;            /* Centralizado */
+    margin: 18px 0 10px 0;         /* Espaçamento acima e abaixo */
+    letter-spacing: 1px;           /* Espaço entre letras */
+    text-shadow: 0 2px 8px rgba(49, 49, 209, 0.847),#731a66fc ; /* Sombra suave */
+      font-style: italic; /* Deixa o texto em itálico */
+}
+.certificados {
+    margin: 60px auto 40px auto; /* Espaçamento acima e abaixo */
+    padding: 0 20px; /* Espaçamento lateral */
+    max-width: 900px; /* Largura máxima */
+    text-align: center; /* Centraliza o texto */
+}
+
+.certificados h2 {
+    font-family: 'Great Vibes', cursive; /* Fonte personalizada */;
+    text-align: center;
+    width: 100%;
+    font-size: 2.5em; /* Tamanho da fonte */
+    color: #06090a;
+    margin-bottom: 30px; /* Espaçamento abaixo */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+.grade-certificados {
+    display: flex; 
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    gap: 32px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens */
+}
+
+.item-certificado {
+    background: #fff;
+    border-radius: 16px; /* Bordas arredondadas */
+    box-shadow: 0 2px 16px #0001; /* Sombra suave */
+    padding: 18px 12px 10px 12px;
+    width: 220px; /* Largura do item */
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza os itens */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transição suave */
+}
+.item-certificado:hover {
+    transform: scale(1.04) translateY(-6px);
+    box-shadow: 0 6px 24px #00ffe7aa;
+}
+.item-certificado img {
+    width: 200px; /* Largura da imagem */
+    height: 120px; /* Altura da imagem */
+    object-fit: cover;
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaçamento abaixo */
+    box-shadow: 0 1px 8px #0002; /* Sombra suave */
+}
+.item-certificado span { 
+    font-family: 'Montserrat', Arial, sans-serif; /* Fonte */
+    font-size: 1em; /* Tamanho da fonte */
+    color: #22223b; /* Cor do texto */
+    margin-top: 4px; /* Espaçamento acima */
+}
+
+.conquistas-habilidades {
+    display: flex; 
+    gap: 40px; 
+    justify-content: center; 
+    align-items: flex-start; 
+    flex-wrap: wrap;
+    margin: 60px auto 40px auto; 
+    max-width: 1200px; 
+}
+.certificados, .grafico-habilidades {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40;
+    flex: 1 1 420px;  /* Permite que os itens cresçam e encolham */
+    min-width: 320px;  /* Largura mínima */
+}
+.grafico-habilidades canvas {
+    max-width: 100%; /* Largura máxima */
+    height: auto; /* Mantém a proporção */
+    margin-top: 40px; /* Espaçamento acima */
+}
+.titulo-conquistas {
+    width: 100%;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    color: #06090a;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+.grafico-habilidades {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 60px; /* Aumente para abaixar mais */
+}
+.livros-recomendados {
+    max-width: 1100px;
+    margin: 60px auto 40px auto;
+    text-align: center;
+}
+
+.titulo-livros {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #06090a;
+    margin-bottom: 50px; /* Espaçamento abaixo */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+.cards-livros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.card-livro {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px #0001;
+    padding: 24px 18px 18px 18px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: left;
+}
+.card-livro:hover {
+    transform: scale(1.04) translateY(-6px);
+    box-shadow: 0 6px 24px #00ffe7aa;
+}
+.card-livro h3 {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1.3em;
+    color: #22223b;
+    margin-bottom: 10px;
+}
+.card-livro .sinopse {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 10px;
+}
+.card-livro .motivo {
+    font-size: 0.98em;
+    color: #731a66;
+    font-style: italic;
+}
