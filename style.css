@@ -1,33 +1,34 @@
+
 /* Estilo geral */
 @font-face {
-    font-family: 'Burgues Script';
-    src: url('fonts/burgues-script.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+ font-family: 'Burgues Script';
+ src: url('fonts/burgues-script.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
 }
 
 body {
-    font-family: 'Poppins', Arial, sans-serif; /* Fonte personalizada */
-    background-color: #f7f3f3; /* Cor de fundo */
-    color: #22223b; /* Cor do texto */
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimento padrão */
-    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total dos elementos */
-    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura total da janela */
-    position: relative; /* Permite posicionamento absoluto dos elementos filhos */
-    overflow-x: hidden; /* Impede rolagem lateral da página */
+ font-family: 'Poppins', Arial, sans-serif; /* Fonte personalizada */
+ background-color: #f7f3f3; /* Cor de fundo */
+ color: #22223b; /* Cor do texto */
+ margin: 0; /* Remove margens padrão */
+ padding: 0; /* Remove preenchimento padrão */
+ box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total dos elementos */
+ min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura total da janela */
+ position: relative; /* Permite posicionamento absoluto dos elementos filhos */
+ overflow-x: hidden; /* Impede rolagem lateral da página */
 }
 
 /* Ícones animados no fundo */
 .icone-fundo { /* Classe base para os ícones de fundo */
-    position: absolute;
-    opacity: 0.19;
-    width: 90px;
-    height: 90px;
-    z-index: 0;
-    filter: blur(1px) drop-shadow(0 0 12px #fff);
-    animation: flutuar 7s infinite alternate;
-    pointer-events: none;
+ position: absolute;
+ opacity: 0.19;
+ width: 90px;
+ height: 90px;
+ z-index: 0;
+ filter: blur(1px) drop-shadow(0 0 12px #fff);
+ animation: flutuar 7s infinite alternate;
+ pointer-events: none;
 }
 .icone1 { top: 10%; left: 8%; animation-delay: 5s; }
 .icone2 { top: 6%; left: 80%; animation-delay: 4.5s; }
@@ -45,439 +46,532 @@ body {
 .icone14 { top: 58%; left: 10%; animation-delay: 2.5s; }
 
 @keyframes flutuar { /* Animação de flutuação dos ícones */
-    0% { transform: translateY(0) scale(1);}
-    100% { transform: translateY(-50px) scale(1.12);}
+ 0% { transform: translateY(0) scale(1);}
+ 100% { transform: translateY(-50px) scale(1.12);}
 }
 
 /* Conteúdo Principal (main) */
 .conteudo {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Alinhamento ao topo para não ficar centralizado verticalmente na página inteira */
-    min-height: 100vh;
-    padding-top: 40px;
+ position: relative;
+ z-index: 1;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: flex-start; /* Alinhamento ao topo para não ficar centralizado verticalmente na página inteira */
+ min-height: 100vh;
+ padding-top: 40px;
 }
 
 /* Perfil */
 .perfil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    margin-bottom: 30px;
-    width: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ padding: 0 20px;
+ margin-bottom: 30px;
+ width: 100%;
 }
 
 .foto-perfil-gradiente { /* Imagem do perfil */
-    position: relative;
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 18px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4), 0 0 0 5px #f7eeee; /* Sombra ao redor da imagem */
+ position: relative;
+ width: 170px;
+ height: 170px;
+ border-radius: 50%;
+ overflow: hidden;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 18px;
+ box-shadow: 0 0 20px rgba(0,0,0,0.4), 0 0 0 5px #f7eeee; /* Sombra ao redor da imagem */
 }
 .foto-perfil {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    /* transition: transform 0.3s; <-- Removido, pois não há hover aplicado diretamente aqui */
+ width: 160px;
+ height: 160px;
+ border-radius: 50%;
+ object-fit: cover;
+ /* transition: transform 0.3s; <-- Removido, pois não há hover aplicado diretamente aqui */
 }
 .foto-perfil-gradiente::before { /* Efeito de hover na imagem do perfil */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #ff00cc, #33a398, #5d0e82,#121111, #fa1f1f, #f7f72d, #1bf02d,#7b6aae);
-    background-size: 500% 500%;
-    animation: gradientAnimation 3s infinite alternate;
-    z-index: -1;
-    border-radius: 50%;
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(45deg, #ff00cc, #33a398, #5d0e82,#121111, #fa1f1f, #f7f72d, #1bf02d,#7b6aae);
+ background-size: 500% 500%;
+ animation: gradientAnimation 3s infinite alternate;
+ z-index: -1;
+ border-radius: 50%;
 }
 @keyframes gradientAnimation { /* Animação do gradiente */
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+ 0% { background-position: 0% 50%; }
+ 100% { background-position: 100% 50%; }
 }
 .perfil h6 {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 0.95em;
-    color: #171717;
-    font-weight: 500;
-    text-align: center;
-    margin: 10px 0 5px 0;
-    font-style: italic;
-    max-width: 750px;
-    padding: 0 20px;
+ font-family: 'Montserrat', Arial, sans-serif;
+ font-size: 0.95em;
+ color: #171717;
+ font-weight: 500;
+ text-align: center;
+ margin: 10px 0 5px 0;
+ font-style: italic;
+ max-width: 750px;
+ padding: 0 20px;
 }
 .nome-imagem { /* Nome da imagem do perfil */
-    display: block;
-    /* Ajustei a margem para ser mais flexível, você pode ajustar o valor de cima/baixo */
-    margin: -90px auto 40px auto; /* Mantido se for para o texto subir e encaixar */
-    max-width: 450px; /* Ajustei para um max-width para controle */
-    width: 80%; /* Largura relativa para se ajustar a telas menores */
-    height: auto;
+ display: block;
+ /* Ajustei a margem para ser mais flexível, você pode ajustar o valor de cima/baixo */
+ margin: -90px auto 40px auto; /* Mantido se for para o texto subir e encaixar */
+ max-width: 450px; /* Ajustei para um max-width para controle */
+ width: 80%; /* Largura relativa para se ajustar a telas menores */
+ height: auto;
 }
 
 .texto-centralizado {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ margin-bottom: 30px;
 }
 
 .texto-bem-vindos {
-    max-width: 1200px;
-    padding: -30px, 8px;    
-    text-align: justify;
-    font-size: 1.1em; /* Tamanho original para desktop */
-    line-height: 1.7;
-    color: #333;
-    font-weight: 500;
+ max-width: 1200px;
+ padding: -30px, 8px;
+ text-align: justify;
+ font-size: 1.1em; /* Tamanho original para desktop */
+ line-height: 1.7;
+ color: #333;
+ font-weight: 500;
 }
 
-/* --- Wrapper para as Colunas de Texto (Jornada e Projeto) --- */
+/* --- Wrapper para os Cards de Projeto/Experiência (para DESKTOP) --- */
 .texto-colunas-wrapper {
-    display: flex; /* ESSENCIAL para colocar os cards lado a lado */
-    flex-direction: column;
-    justify-content: center; /* Centraliza os cards no espaço disponível */
-    align-items: stretch; /* Garante que os cards tenham a mesma altura */
-    max-width: 1200px; /* Largura máxima do contêiner de colunas */
-    margin: 40px auto; /* Centraliza o contêiner e adiciona um bom espaço */
-    padding: 0 20px; /* Espaçamento interno nas laterais do contêiner */
-    gap: 30px; /* Espaço entre os cards quando estão lado a lado */
+ display: flex; /* Para os cards ficarem lado a lado no desktop */
+ flex-direction: row; /* PADRÃO: Lado a lado para desktop */
+ justify-content: center;
+ align-items: stretch; /* Garante que os cards tenham a mesma altura no desktop */
+ max-width: 1200px;
+ margin: 40px auto;
+ padding: 0 20px;
+ gap: 30px; /* Espaço entre os cards no desktop */
 }
 
-/* --- Cards de Projetos/Experiências --- */
+/* --- Cards de Projetos/Experiências (Estilos PADRÃO para DESKTOP) --- */
 .card-projeto {
-    background-color: #ffffff; /* Fundo branco inicial do card */
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para o hover do card */
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative; /* ESSENCIAL para posicionar o pseudo-elemento */
-    z-index: 1; /* Garante que o conteúdo do card fique acima do efeito de fundo */
-    overflow: hidden; /* Esconde qualquer parte do brilho que vaze as bordas do card */
-    width: 100%; /* ocupa a largura total do container */ 
-    max-width: 1150px; /* largura maxima do container */ 
+ background-color: #ffffff;
+ border-radius: 12px;
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+ padding: 30px;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ cursor: pointer;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+ width: 100%; /* Cada card ocupa a largura total do espaço disponível para ele (dentro do flex-item) */
+ max-width: 585px; /* AJUSTE: Limite a largura para caberem dois lado a lado, considerando o gap. Era 1150px, que forçaria um só card por linha. */
 }
 
 /* Efeito de brilho azul por trás no hover (::before) */
 .card-projeto::before {
-    content: '';
-    position: absolute;
-    top: -10%; /* Começa um pouco acima do card */
-    left: -10%; /* Começa um pouco à esquerda do card */
-    width: 120%; /* Expande a largura para cobrir um pouco mais que o card */
-    height: 120%; /* Expande a altura para cobrir um pouco mais que o card */
-    background: radial-gradient(circle at center, rgba(85, 195, 232, 0.304) 0%, rgba(236, 233, 236, 0.952) 70%); /* Azul claro radial que desvanece */
-    border-radius: 12px; /* Mantém o border-radius do card */
-    z-index: -1; /* COLOCA ATRÁS DO CONTEÚDO DO CARD */
-    opacity: 0; /* Começa invisível */
-    transform: scale(0.5); /* Começa bem menor, para expandir no hover */
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Transição para aparecer e expandir suavemente */
+ content: '';
+ position: absolute;
+ top: -10%;
+ left: -10%;
+ width: 120%;
+ height: 120%;
+ background: radial-gradient(circle at center, rgba(85, 195, 232, 0.304) 0%, rgba(236, 233, 236, 0.952) 70%);
+ border-radius: 12px;
+ z-index: -1;
+ opacity: 0;
+ transform: scale(0.5);
+ transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
 /* Efeito de hover no card: Ativa o brilho no ::before */
 .card-projeto:hover::before {
-    opacity: 1; /* Torna o fundo visível ao passar o mouse */
-    transform: scale(1.1); /* Expande o brilho para cobrir o card e ir um pouco além */
+ opacity: 1;
+ transform: scale(1.1);
 }
 
 /* Efeito de hover no card: O próprio card ainda levanta e tem a sombra */
 .card-projeto:hover {
-    transform: translateY(-10px) scale(1.02); /* Eleva e aumenta ligeiramente o card */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no card */
+ transform: translateY(-10px) scale(1.02);
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo do título dentro do card */
 .card-projeto h3 {
-    font-family: "Sans serif";
-    font-weight: 600;
-    color: #22223b; /* A cor principal do seu texto */
-    margin-top: 0px;
-    margin-bottom: 15px;
-    font-size: 1.8em;
-    text-align: center;
+ font-family: "Sans serif";
+ font-weight: 600;
+ color: #22223b;
+ margin-top: 0px;
+ margin-bottom: 15px;
+ font-size: 1.8em;
+ text-align: center;
 }
 
 /* Estilo do parágrafo dentro do card */
 .card-projeto p {
-    font-size: 1.05em;
-    color: #444;
-    line-height: 1.6;
-    margin-bottom: 15px;
+ font-size: 1.05em;
+ color: #444;
+ line-height: 1.6;
+ margin-bottom: 15px;
 }
 
 .card-projeto p strong {
-    color: #0056b3;
+ color: #0056b3;
 }
 
 /* Estilos para as tags de tecnologia */
 .tecnologias {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 15px;
-    justify-content: center;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ margin-top: 15px;
+ justify-content: center;
 }
 
 .tecnologias span {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.85em;
-    font-weight: 500;
-    white-space: nowrap;
+ background-color: #007bff;
+ color: #ffffff;
+ padding: 6px 12px;
+ border-radius: 20px;
+ font-size: 0.85em;
+ font-weight: 500;
+ white-space: nowrap;
 }
 
-/* --- Redes Sociais (coloquei aqui para consolidar, se estiver no seu HTML) --- */
+/* --- Redes Sociais (Estilos PADRÃO para DESKTOP) --- */
 .redes-sociais {
-    display: flex; 
-    justify-content: center; 
-    gap: 24px; 
-    margin: -20px 0 20px 0;
-    border-radius: 50px;
-    padding: 20px;
+ display: flex; 
+ justify-content: center; 
+ gap: 24px; 
+ margin: -20px 0 20px 0; /* Margem negativa que pode precisar de ajuste */
+ border-radius: 50px;
+ padding: 20px;
 }
 .redes-sociais a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-decoration: none;
 }
 .icone-rede {
-    width: 68px; 
-    height: 68px;
-    transition: transform 0.2s;
-    border-radius: 50%;
-    background-color: #292e2e;
-    margin-top: -120px; 
+ width: 68px; 
+ height: 68px;
+ transition: transform 0.2s;
+ border-radius: 50%;
+ background-color: #292e2e;
+ margin-top: -120px; /* Margem negativa que pode precisar de ajuste */
 }
 .icone-rede:hover {
-    transform: scale(1.25);
-    filter: drop-shadow(0 0 25px #26cfed);
+ transform: scale(1.25);
+ filter: drop-shadow(0 0 25px #26cfed);
 }
 .nome-rede {
-    margin-top: 6px;
-    font-size: 0.95em;
-    color: #0e0e12;
-    font-weight: 500;
-    text-align: center;
-    font-family: 'Poppins', Arial, sans-serif;
+ margin-top: 6px;
+ font-size: 0.95em;
+ color: #0e0e12;
+ font-weight: 500;
+ text-align: center;
+ font-family: 'Poppins', Arial, sans-serif;
 }
 
-/* --- Media Queries para Responsividade --- */
-@media (max-width: 850px) { /* Este é o único bloco de media query para 850px */
-    .texto-colunas-wrapper {
-        flex-direction: column; /* Colunas empilham em telas menores */
-        gap: 30px;
-        padding: 0 15px; 
-        align-items: center; /* Centraliza os cards quando estão empilhados */
-    }
-
-    .texto-coluna-menor,
-    .texto-coluna-maior {
-        padding-right: 0;
-        padding-left: 0;
-        min-width: 90%; /* Ocupa mais largura em mobile */
-        max-width: 450px; /* Limita a largura em mobile para não ficar muito largo em tablets */
-    }
-
-    /* Outros ajustes de responsividade que você já tinha: */
-    .perfil {
-        padding: 20px 15px;
-    }
-
-    .nome-imagem {
-        max-width: 300px;
-        width: 90%;
-        margin: -70px auto 20px auto; /* Ajuste para mobile */
-    }
-
-    .texto-centralizado {
-        margin-bottom: 20px;
-    }
-
-    .texto-bem-vindos {
-        font-size: 1.1em; /* Ajustei para 1.1em, mas você pode mudar para 1em se quiser menor */
-        padding: 0 15px;
-        text-align: justify;
-    }
-}/* --- Estilos para os Ícones de Slogan (Tecnologias) dentro dos Cards --- */
+/* --- Estilos para os Ícones de Slogan (Tecnologias) dentro dos Cards --- */
 .icones-slogan-tecnologias {
-    display: flex; /* Para alinhar os ícones lado a lado */
-    justify-content: center; /* Centraliza os ícones horizontalmente */
-    align-items: center; /* Centraliza os ícones verticalmente */
-    gap: 12px; /* Espaço entre os ícones */
-    margin-top: 15px; /* Puxa um pouco para cima, para ficar mais perto do título */
-    margin-bottom: 15px; /* Espaçamento abaixo do bloco de ícones, antes do parágrafo */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 12px;
+ margin-top: 15px;
+ margin-bottom: 15px;
 }
 
 .icones-slogan-tecnologias img {
-    width: 82px; /* Tamanho dos ícones (ajuste conforme preferir) */
-    height: 82px; /* Garante que os ícones fiquem quadrados */
-    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
-    filter: grayscale(10%); /* Deixa os ícones levemente em tons de cinza para não roubar o foco */
-    transition: filter 0.3s ease; /* Transição suave para o hover */
+ width: 82px;
+ height: 82px;
+ object-fit: contain;
+ filter: grayscale(10%);
+ transition: filter 0.3s ease;
 }
 
 .icones-slogan-tecnologias img:hover {
-    filter: grayscale(0%); /* Remove o tom de cinza no hover, mostrando a cor original */
+ filter: grayscale(0%);
 }
+
 /* Seção Geral dos Certificados */
 .certificados-section {
-    padding: 60px 20px; /* Espaçamento interno */
-    text-align: center;
-    background-color: #f7f3f3; /* Cor de fundo da seção */
+ padding: 60px 20px;
+ text-align: center;
+ background-color: #f7f3f3;
 }
 
 .certificados-section h2 {
-    font-family: 'Poppins', Arial, sans-serif;
-    font-size: 2.5em;
-    color: #22223b;
-    margin-bottom: 40px;
+ font-family: 'Poppins', Arial, sans-serif;
+ font-size: 2.5em;
+ color: #22223b;
+ margin-bottom: 40px;
 }
 
 /* Contêiner principal do carrossel */
 .certificados-carousel-container {
-    position: relative;
-    max-width: 968px; /* Largura máxima do carrossel, ajuste se necessário */
-    margin: 0 auto; /* Centraliza o carrossel */
-    display: flex; /* Para alinhar a lista e os botões */
-    align-items: center; /* Centraliza os botões verticalmente com a lista */
-    overflow: hidden; /* Esconde o que estiver fora do contêiner */
+ position: relative;
+ max-width: 968px; /* Largura máxima do carrossel no desktop */
+ margin: 0 auto;
+ display: flex;
+ align-items: center;
+ overflow: hidden;
 }
 
 /* Lista de certificados (onde a mágica da rolagem acontece) */
 .certificados-lista {
-    display: flex; /* Faz os itens ficarem lado a lado */
-    overflow-x: scroll; /* ATENÇÃO: Habilita a rolagem horizontal */
-    scroll-behavior: smooth; /* Rolagem suave */
-    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos touch */
-    padding: 20px 0; /* Espaçamento interno para os itens */
-    gap: 20px; /* Espaçamento entre os certificados */
-    flex-wrap: nowrap; /* Impede que os itens quebrem linha */
-    scrollbar-width: none; /* Esconde a barra de rolagem para Firefox */
-    -ms-overflow-style: none;  /* Esconde a barra de rolagem para IE/Edge */
+ display: flex;
+ overflow-x: scroll;
+ scroll-behavior: smooth;
+ -webkit-overflow-scrolling: touch;
+ padding: 20px 0;
+ gap: 20px;
+ flex-wrap: nowrap;
+ scrollbar-width: none;
+ -ms-overflow-style: none;
 }
 
 /* Esconde a barra de rolagem para navegadores baseados em WebKit (Chrome, Safari, etc.) */
 .certificados-lista::-webkit-scrollbar {
-    display: none;
+ display: none;
 }
 
 /* Item individual do certificado */
 .certificado-item {
-    min-width: 180px; /* Largura mínima de cada certificado. Ajuste para caber 6 por vez. */
-    max-width: 200px; /* Largura máxima para manter uniformidade */
-    flex-shrink: 0; /* Impede que os itens encolham */
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease;
+ min-width: 180px; /* Largura mínima para desktop */
+ max-width: 200px; /* Largura máxima para manter uniformidade no desktop */
+ flex-shrink: 0;
+ background-color: #ffffff;
+ border-radius: 8px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+ padding: 15px;
+ text-align: center;
+ transition: transform 0.3s ease;
 }
 
 .certificado-item:hover {
-    transform: translateY(-5px) scale(1.02);
+ transform: translateY(-5px) scale(1.02);
 }
 
 .certificado-item img {
-    max-width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 4px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ max-width: 100%;
+ height: auto;
+ border-radius: 4px;
+ margin-bottom: 10px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .certificado-item p {
-    font-size: 0.9em;
-    color: #444;
-    font-weight: 500;
-    line-height: 1.3;
+ font-size: 0.9em;
+ color: #444;
+ font-weight: 500;
+ line-height: 1.3;
 }
 
 /* Botões de navegação do carrossel */
 .carousel-btn {
-    background-color: #3e90e789;
-    color: #fff;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 50%; /* Botões redondos */
-    cursor: pointer;
-    font-size: 1.5em;
-    font-weight: bold;
-    position: absolute; /* Posiciona sobre o carrossel */
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10; /* Garante que fiquem acima dos certificados */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+ background-color: #3e90e789;
+ color: #fff;
+ border: none;
+ padding: 12px 18px;
+ border-radius: 50%;
+ cursor: pointer;
+ font-size: 1.5em;
+ font-weight: bold;
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ z-index: 10;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+ transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .carousel-btn:hover {
-    background-color: #62a7f17c;
-    transform: translateY(-50%) scale(1.1);
+ background-color: #62a7f17c;
+ transform: translateY(-50%) scale(1.1);
 }
 
 .prev-btn {
-    left: -20px; /* Posiciona fora do contêiner para não atrapalhar o primeiro item */
+ left: -20px;
 }
 
 .next-btn {
-    right: -20px; /* Posiciona fora do contêiner para não atrapalhar o último item */
+ right: -20px;
 }
 
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
+/* --- Media Queries para Responsividade --- */
+/* Estilos para telas até 850px (tablets e celulares maiores) */
+@media (max-width: 850px) {
+    /* Ajustes para o Wrapper dos Cards de Projeto */
+ .texto-colunas-wrapper {
+ flex-direction: column; /* FORÇA os cards a empilharem em telas menores */
+ align-items: center; /* Centraliza os cards quando estão empilhados */
+ padding: 0 15px; /* Ajusta o padding lateral do wrapper */
+ gap: 30px; /* Mantém o espaçamento entre os cards empilhados */
+ }
+
+    /* Ajustes para o Card de Projeto individual no mobile */
+    .card-projeto {
+        max-width: 90%; /* Limita a largura dos cards para não ficarem muito grandes em tablets */
+        padding: 20px; /* Diminui o padding interno */
+    }
+
+    /* Ajustes para o Perfil */
+    .perfil h6 {
+        font-size: 0.85em;
+        padding: 0 10px;
+    }
+    .nome-imagem {
+        max-width: 300px;
+        width: 90%;
+        margin: -70px auto 20px auto;
+    }
+
+    /* Ajustes para texto geral */
+    .texto-centralizado {
+        margin-bottom: 20px;
+    }
+    .texto-bem-vindos {
+        font-size: 1em; /* Ajusta o tamanho da fonte */
+        padding: 0 15px;
+    }
+
+    /* Ajustes para elementos dentro dos Cards */
+    .card-projeto h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .card-projeto p {
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    .icones-slogan-tecnologias {
+        gap: 8px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .icones-slogan-tecnologias img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Ajustes para Redes Sociais */
+    .redes-sociais {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: -80px;
+        padding: 10px;
+    }
+    .icone-rede {
+        width: 50px;
+        height: 50px;
+        margin-top: -60px;
+    }
+    .nome-rede {
+        font-size: 0.8em;
+    }
+
+    /* Ajustes para a Seção de Certificados */
     .certificados-section h2 {
         font-size: 2em;
     }
-    .certificado-item {
-        min-width: 160px; /* Ajuste para telas menores */
-    }
-    .carousel-btn {
-        padding: 8px 12px;
-        font-size: 1.2em;
-    }
-    .prev-btn {
-        left: 5px;
-    }
-    .next-btn {
-        right: 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    .certificados-section {
-        padding: 40px 10px;
+    .certificados-carousel-container {
+        width: 100%;
+        padding: 0 10px;
     }
     .certificados-lista {
         padding: 10px 0;
-        gap: 15px;
+        gap: 10px;
     }
     .certificado-item {
-        min-width: 140px; /* Ainda menor para celulares */
+        min-width: 120px;
+        max-width: 140px;
         padding: 10px;
+    }
+    .certificado-item p {
+        font-size: 0.8em;
     }
     .carousel-btn {
         padding: 6px 10px;
         font-size: 1em;
+    }
+    .prev-btn {
+        left: 0px;
+    }
+    .next-btn {
+        right: 0px;
+    }
+}
+
+/* Estilos para telas MUITO pequenas (até 480px, ou celulares pequenos) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9em; /* Reduz o tamanho base da fonte do body */
+    }
+    .perfil h6 {
+        font-size: 0.75em;
+    }
+    .nome-imagem {
+        margin: -60px auto 15px auto;
+    }
+    .texto-bem-vindos {
+        font-size: 0.9em;
+    }
+    .card-projeto {
+        padding: 15px; /* Reduz ainda mais o padding do card */
+    }
+    .card-projeto h3 {
+        font-size: 1.3em;
+    }
+    .card-projeto p {
+        font-size: 0.85em;
+    }
+    .icones-slogan-tecnologias img {
+        width: 45px;
+        height: 45px;
+    }
+    .redes-sociais {
+        gap: 10px;
+        margin-top: -50px;
+    }
+    .icone-rede {
+        width: 40px;
+        height: 40px;
+        margin-top: -40px;
+    }
+    .nome-rede {
+        font-size: 0.7em;
+    }
+
+    /* Ajustes para a Seção de Certificados em telas muito pequenas */
+    .certificados-section {
+        padding: 30px 5px;
+    }
+    .certificados-section h2 {
+        font-size: 1.8em;
+    }
+    .certificados-lista {
+        padding: 5px 0;
+        gap: 10px;
+    }
+    .certificado-item {
+        min-width: 100px;
+        max-width: 110px;
+        padding: 8px;
+    }
+    .carousel-btn {
+        padding: 4px 8px;
+        font-size: 0.8em;
     }
 }
